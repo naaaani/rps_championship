@@ -13,7 +13,7 @@ def main():
     rocky2.start_season()
     
     match = Match(rocky1, rocky2)
-    match.perform_round()    
+    match.play_match()    
 
 if __name__ == "__main__":
     main()
