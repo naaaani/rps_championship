@@ -1,5 +1,8 @@
 class Player:
 
+    def get_name(self):
+        return None
+
     def start_season(self):
         self.match_count = 0
 
