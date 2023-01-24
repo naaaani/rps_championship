@@ -2,6 +2,9 @@ from player import Player
 
 
 class Rocky(Player):
+    
+    def get_name(self):
+        return "Rocky"
 
     def start_season(self):
         Player.start_season(self)
@@ -11,6 +14,5 @@ class Rocky(Player):
         Player.start_match(self)
         print("Rocky rocks the match!")
 
-def shoot(self):
-    
-    return "R"
+    def shoot(self):
+        return "R"
