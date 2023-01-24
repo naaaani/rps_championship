@@ -4,4 +4,4 @@ class Player:
         self.match_count = 0
 
     def start_match(self):
-        pass
+        self.match_count += 1

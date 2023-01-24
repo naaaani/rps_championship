@@ -11,6 +11,5 @@ def main():
     answer = rocky.shoot()
     print(rocky.get_name() + " says: " + answer)
 
-
 if __name__ == "__main__":
     main()
