@@ -29,11 +29,9 @@ class Match():
                 self.draw_count += 1
         
         if self.win_count_p1 > self.win_count_p2:
-            return 1
-            
+            return 1    
         elif self.win_count_p1 < self.win_count_p2:
             return 2
-        
         else:
             return 3
 

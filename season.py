@@ -34,4 +34,11 @@ class Season:
 
         match = Match(p1, p2)
         winner = match.play_match()
-        
+
+        if winner == 1:
+            e1[1] += 2
+        elif winner == 2:
+            e2[1] += 2        
+        else:
+            e1[1] += 1
+            e2[1] += 1
