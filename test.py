@@ -3,6 +3,7 @@
 import unittest
 from match import Match
 from player_stub import StubPlayer
+from player_robin import RobinPlayer
 
 
 class TestStringMethods(unittest.TestCase):
@@ -60,6 +61,21 @@ class TestStringMethods(unittest.TestCase):
 
             m = Match(p1, p2)
             r = m.perform_round()
+
+    def test_robin(self):
+
+        robin = RobinPlayer()
+        robin.start_match()
+
+        shot1 = robin.shoot()
+        shot2 = robin.shoot()
+        shot3 = robin.shoot()
+        shot4 = robin.shoot()
+
+        self.assertEqual(shot1, "R")
+        self.assertEqual(shot2, "P")
+        self.assertEqual(shot3, "S")
+        self.assertEqual(shot4, "R")
 
 
 if __name__ == '__main__':

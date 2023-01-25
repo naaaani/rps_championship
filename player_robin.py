@@ -6,10 +6,6 @@ class RobinPlayer(Player):
     def get_name(self):
         return "Robin"
 
-    def start_season(self):
-        Player.start_season(self)
-        print("Robin around the season!")
-
     def start_match(self):
         Player.start_match(self)
         self.shoot_tracker = 0

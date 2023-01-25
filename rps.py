@@ -8,8 +8,7 @@ from season import Season
 def main():
 
     m = Match(RockyPlayer(), RobinPlayer())
-    #m.play_match()
-    m.perform_round()
+    m.play_match()
 
 
     quit()
