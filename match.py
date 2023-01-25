@@ -27,8 +27,15 @@ class Match():
                 self.win_count_p2 += 1
             else:
                 self.draw_count += 1
-
-        self.close_match()
+        
+        if self.win_count_p1 > self.win_count_p2:
+            return 1
+            
+        elif self.win_count_p1 < self.win_count_p2:
+            return 2
+        
+        else:
+            return 3
 
     def perform_round(self):
 
@@ -53,16 +60,4 @@ class Match():
         if shoot1 == "S" and shoot2 == "R": return 2
         if shoot1 == "S" and shoot2 == "P": return 1
 
-    def close_match(self):
-        
-        if self.win_count_p1 > self.win_count_p2:
-            print(f"{self.player1.get_name()} won.")
-            #self.player1.add_point(2)
-        elif self.win_count_p1 < self.win_count_p2:
-            print(f"{self.player2.get_name()} won.")
-            #self.player2.add_point(2)
-        else:
-            print("Draw.")
-            #self.player1.add_point(1)
-            #self.player2.add_point(1)
-        
+    
