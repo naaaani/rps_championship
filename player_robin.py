@@ -1,7 +1,7 @@
 from player import Player
 
 
-class Robin(Player):
+class RobinPlayer(Player):
     
     def get_name(self):
         return "Robin"
