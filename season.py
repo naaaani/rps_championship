@@ -14,7 +14,7 @@ class Season:
         
         print("Dump:")
 
-        for entry in self.table:
+        for entry in sorted(self.table, reverse=True, key = lambda x: x[1]):
 
             print(entry[0].get_name(), entry[1]) 
 
