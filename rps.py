@@ -3,14 +3,20 @@
 from player_robin import RobinPlayer
 from player_kevin import KevinPlayer
 from player_stub import StubPlayer
+from player_carol import CarolPlayer
+from player_cool import CoolPlayer
+from player_lucy import LucyPlayer
 from match import Match
 from season import Season
 
 def main():
  
-    season = Season()
+    season = Season(12)
     season.add_player(RobinPlayer())
     season.add_player(KevinPlayer())
+    season.add_player(CarolPlayer())
+    season.add_player(CoolPlayer())
+    season.add_player(LucyPlayer())
 
     p = StubPlayer()
     p.always_shoot("P")

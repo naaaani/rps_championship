@@ -67,10 +67,10 @@ class TestStringMethods(unittest.TestCase):
         robin = RobinPlayer()
         robin.start_match()
 
-        shot1 = robin.shoot()
-        shot2 = robin.shoot()
-        shot3 = robin.shoot()
-        shot4 = robin.shoot()
+        shot1 = robin.shoot(0)
+        shot2 = robin.shoot(1)
+        shot3 = robin.shoot(2)
+        shot4 = robin.shoot(3)
 
         self.assertEqual(shot1, "R")
         self.assertEqual(shot2, "P")

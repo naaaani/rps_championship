@@ -6,11 +6,11 @@ class RobinPlayer(Player):
     def get_name(self):
         return "Robin"
 
-    def start_match(self):
-        Player.start_match(self)
+    def start_match(self, round_count):
+        Player.start_match(self, round_count)
         self.shoot_tracker = 0
 
-    def shoot(self):
+    def shoot(self, round_number):
         
         options = ("R", "P", "S")
         shoot = options[self.shoot_tracker]

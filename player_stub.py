@@ -9,7 +9,7 @@ class StubPlayer(Player):
     def get_name(self):
         return self.name
 
-    def shoot(self):
+    def shoot(self, round_number):
         return self.forced_shoot
     
     def always_shoot(self, shoot):

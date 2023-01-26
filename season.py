@@ -3,9 +3,10 @@ from match import Match
 
 class Season:
 
-    def __init__(self):
+    def __init__(self, round_count):
 
         self.table = []
+        self.r = round_count
 
     def add_player(self, player):
 
@@ -31,7 +32,7 @@ class Season:
         p1 = e1[0]
         p2 = e2[0]
 
-        match = Match(p1, p2)
+        match = Match(p1, p2, self.r)
         (winner, wc1, wc2) = match.play_match()
 
         if winner == 1:
