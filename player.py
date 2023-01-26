@@ -8,3 +8,6 @@ class Player:
 
     def shoot(self):
         assert(True)
+
+    def feedback(self, result, opp_shot):
+        assert(True)

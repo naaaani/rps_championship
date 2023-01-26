@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from player_robin import RobinPlayer
-from player_rocky import RockyPlayer
+from player_kevin import KevinPlayer
 from player_stub import StubPlayer
 from match import Match
 from season import Season
@@ -9,11 +9,23 @@ from season import Season
 def main():
  
     season = Season()
-    season.add_player(RockyPlayer())
     season.add_player(RobinPlayer())
-    p3 = StubPlayer()
-    p3.always_shoot("P")
-    season.add_player(p3)
+    season.add_player(KevinPlayer())
+
+    p = StubPlayer()
+    p.always_shoot("P")
+    p.set_name("Pierre")
+    season.add_player(p)
+
+    p = StubPlayer()
+    p.always_shoot("R")
+    p.set_name("Rocky")
+    season.add_player(p)
+
+    p = StubPlayer()
+    p.always_shoot("S")
+    p.set_name("Simon")
+    season.add_player(p)
 
     season.perform_season()
 

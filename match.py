@@ -41,6 +41,13 @@ class Match():
         shoot2 = self.player2.shoot()
         winner = self.get_winner(shoot1, shoot2)
         
+        self.player1.feedback(winner, shoot2)
+        if winner != 3:
+            result2 = 3 - winner
+        else:
+            result2 = winner
+        self.player2.feedback(result2, shoot1)
+
         return winner
 
     def get_winner(self, shoot1, shoot2):
