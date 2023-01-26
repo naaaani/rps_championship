@@ -9,7 +9,6 @@ class RobinPlayer(Player):
     def start_match(self):
         Player.start_match(self)
         self.shoot_tracker = 0
-        print("Robin around the match!")
 
     def shoot(self):
         

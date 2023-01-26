@@ -10,9 +10,7 @@ class Match():
 
 
     def play_match(self):
-
-        print(f"Starting match with {self.player1.get_name()} and {self.player2.get_name()}")
-        
+       
         self.win_count_p1 = 0
         self.win_count_p2 = 0
         self.draw_count = 0
@@ -29,11 +27,13 @@ class Match():
                 self.draw_count += 1
         
         if self.win_count_p1 > self.win_count_p2:
-            return 1    
+            result = 1    
         elif self.win_count_p1 < self.win_count_p2:
-            return 2
+            result = 2
         else:
-            return 3
+            result = 3
+        
+        return (result, self.win_count_p1, self.win_count_p2)
 
     def perform_round(self):
 

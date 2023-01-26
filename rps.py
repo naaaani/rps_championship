@@ -6,9 +6,8 @@ from player_stub import StubPlayer
 from match import Match
 from season import Season
 
-
 def main():
-
+ 
     season = Season()
     season.add_player(RockyPlayer())
     season.add_player(RobinPlayer())
