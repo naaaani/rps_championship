@@ -20,8 +20,7 @@ class MemoPlayer(Player):
         elif result == 2:
             self.mem[opp_shot] += 3
         else:
-            self.mem[self.last_shot] += 1
-            self.mem[opp_shot] += 1
+            self.mem[self.last_shot] += 2
         
     def shoot(self, round_number):
 
