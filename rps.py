@@ -1,22 +1,25 @@
 #!/usr/bin/python3
 
+from match import Match
+from season import Season
+
 from player_robin import RobinPlayer
 from player_kevin import KevinPlayer
 from player_stub import StubPlayer
 from player_carol import CarolPlayer
 from player_cool import CoolPlayer
 from player_lucy import LucyPlayer
-from match import Match
-from season import Season
+from player_memo import MemoPlayer
 
 def main():
- 
-    season = Season(12)
+    
+    season = Season(20)
     season.add_player(RobinPlayer())
     season.add_player(KevinPlayer())
     season.add_player(CarolPlayer())
     season.add_player(CoolPlayer())
     season.add_player(LucyPlayer())
+    season.add_player(MemoPlayer())
 
     p = StubPlayer()
     p.always_shoot("P")
@@ -34,7 +37,6 @@ def main():
     season.add_player(p)
 
     season.perform_season()
-
     season.dump()
 
 if __name__ == "__main__":

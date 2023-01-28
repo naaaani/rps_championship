@@ -15,5 +15,3 @@ class KevinPlayer(Player):
 
     def shoot(self, round_number):
         return self.prev_shot
-        
-        
