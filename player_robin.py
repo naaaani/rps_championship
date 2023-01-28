@@ -4,7 +4,7 @@ from player import Player
 class RobinPlayer(Player):
     
     def get_name(self):
-        return "Robin"
+        return "Round Robin"
 
     def start_match(self, round_count):
         Player.start_match(self, round_count)

@@ -23,17 +23,17 @@ def main():
 
     p = StubPlayer()
     p.always_shoot("P")
-    p.set_name("Pierre")
+    p.set_name("Paper Pierre")
     season.add_player(p)
 
     p = StubPlayer()
     p.always_shoot("R")
-    p.set_name("Rocky")
+    p.set_name("Rocky Rock")
     season.add_player(p)
 
     p = StubPlayer()
     p.always_shoot("S")
-    p.set_name("Simon")
+    p.set_name("Scissors Simon")
     season.add_player(p)
 
     season.perform_season()

@@ -4,7 +4,7 @@ from player import Player
 class KevinPlayer(Player):
     
     def get_name(self):
-        return "Kevin"
+        return "Copy Kevin"
 
     def start_match(self, round_count):
         Player.start_match(self, round_count)

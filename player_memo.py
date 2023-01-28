@@ -4,7 +4,7 @@ from player import Player
 class MemoPlayer(Player):
 
     def get_name(self):
-        return "Memo"
+        return "Memo Mary"
 
     def start_match(self, round_count):
         Player.start_match(self, round_count)

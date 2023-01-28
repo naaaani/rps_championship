@@ -3,7 +3,7 @@ from player import Player
 class LucyPlayer(Player):
     
     def get_name(self):
-        return "Lucy"
+        return "Lazy Lucy"
 
     def start_match(self, round_count):
         Player.start_match(self, round_count)
