@@ -1,5 +1,7 @@
 from match import Match
 
+class Entry:
+    pass
 
 class Season:
 
@@ -10,44 +12,51 @@ class Season:
 
     def add_player(self, player):
 
-        self.table.append([player, 0, 0, 0, 0])
+        entry = Entry()
+        entry.player = player
+        entry.pts = 0
+        entry.win = 0
+        entry.draw = 0
+        entry.lose = 0
+
+        self.table.append(entry)
 
     def dump(self):
 
         print("Results")
 
-        for entry in sorted(self.table, reverse=True, key=lambda x: x[1]):
+        for entry in sorted(self.table, reverse=True, key=lambda x: x.pts):
 
             print(" ",
-                  entry[0].get_name(),
-                  entry[1],
+                  entry.player.get_name(),
+                  entry.pts,
                   "-",
-                  entry[2],
-                  entry[3],
-                  entry[4]
+                  entry.win,
+                  entry.draw,
+                  entry.lose
                   )
 
     def play_match(self, e1, e2):
 
-        p1 = e1[0]
-        p2 = e2[0]
+        p1 = e1.player
+        p2 = e2.player
 
         match = Match(p1, p2, self.r)
         (winner, wc1, wc2) = match.play_match()
 
         if winner == 1:
-            e1[1] += 2
-            e1[2] += 1
-            e2[3] += 1
+            e1.pts += 2
+            e1.win += 1
+            e2.lose += 1
         elif winner == 2:
-            e2[1] += 2
-            e2[2] += 1
-            e1[3] += 1
+            e2.pts += 2
+            e2.win += 1
+            e1.lose += 1
         else:
-            e1[1] += 1
-            e2[1] += 1
-            e1[4] += 1
-            e2[4] += 1
+            e1.pts += 1
+            e1.draw += 1
+            e2.pts += 1
+            e2.draw += 1
 
         print(" ", p1.get_name(), "-", p2.get_name(), ":", wc1, "-", wc2)
 
