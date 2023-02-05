@@ -24,17 +24,27 @@ class Season:
     def dump(self):
 
         print("Results")
+        order = 1
+        prev_pts = -1
 
         for entry in sorted(self.table, reverse=True, key=lambda x: x.pts):
 
-            print(" ",
-                  entry.player.get_name(),
-                  entry.pts,
-                  "-",
-                  entry.win,
-                  entry.draw,
-                  entry.lose
-                  )
+            if prev_pts == entry.pts:
+                printed_order = "  "
+            else:
+                printed_order = order
+
+            print(" {:>2} {:<20} {:>3}  - {:>2} {:>2} {:>2}".format(
+                printed_order,
+                entry.player.get_name(),
+                entry.pts,
+                entry.win,
+                entry.draw,
+                entry.lose
+                ))
+            
+            order += 1
+            prev_pts = entry.pts
 
     def play_match(self, e1, e2):
 
