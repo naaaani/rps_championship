@@ -1,3 +1,5 @@
+import urllib.request
+
 class Match:
 
     def __init__(self, player1, player2, round_count = 5):
@@ -52,6 +54,9 @@ class Match:
         return winner
 
     def get_winner(self, shoot1, shoot2):
+        return self.get_winner_local(shoot1, shoot2)
+    
+    def get_winner_local(self, shoot1, shoot2):
 
         assert(shoot1 == "R" or shoot1 == "S" or shoot1 == "P")
         assert(shoot2 == "R" or shoot2 == "S" or shoot2 == "P")
@@ -66,4 +71,10 @@ class Match:
         if shoot1 == "S" and shoot2 == "R": return 2
         if shoot1 == "S" and shoot2 == "P": return 1
 
-    
+    def get_winner_remote(self, shoot1, shoot2):
+
+        link = f"http://kloud.5eb1f6b2.nip.io/rps/rps.php?p1={shoot1}&p2={shoot2}"
+        f = urllib.request.urlopen(link)
+        result = int(f.read().decode("ascii").strip())
+        f.close()
+        return result

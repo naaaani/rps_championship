@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import unittest
 from match import Match
@@ -65,7 +65,7 @@ class TestStringMethods(unittest.TestCase):
     def test_robin(self):
 
         robin = RobinPlayer()
-        robin.start_match()
+        robin.start_match(10)
 
         shot1 = robin.shoot(0)
         shot2 = robin.shoot(1)

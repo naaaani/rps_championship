@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 from match import Match
 from season import Season
@@ -14,7 +14,9 @@ from player_memo import MemoPlayer
 def main():
     
     season = Season(100)
-    season.add_player(RobinPlayer())
+    season.add_player(RobinPlayer("R"))
+    season.add_player(RobinPlayer("P"))
+    season.add_player(RobinPlayer("S"))
     season.add_player(KevinPlayer())
     season.add_player(CarolPlayer())
     season.add_player(CoolPlayer())
