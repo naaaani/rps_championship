@@ -54,9 +54,9 @@ class Match:
         return winner
 
     def get_winner(self, shoot1, shoot2):
-        return self.get_winner_local(shoot1, shoot2)
+        return self.get_winner_service(shoot1, shoot2)
     
-    def get_winner_local(self, shoot1, shoot2):
+    def get_winner_local(shoot1, shoot2):
 
         assert(shoot1 == "R" or shoot1 == "S" or shoot1 == "P")
         assert(shoot2 == "R" or shoot2 == "S" or shoot2 == "P")
@@ -78,3 +78,12 @@ class Match:
         result = int(f.read().decode("ascii").strip())
         f.close()
         return result
+    
+    def get_winner_service(self, shoot1, shoot2):
+
+        link = f"http://localhost:8080?p1={shoot1}&p2={shoot2}"
+        f = urllib.request.urlopen(link)
+        result = int(f.read().decode("ascii").strip())
+        f.close()
+        return result
+    

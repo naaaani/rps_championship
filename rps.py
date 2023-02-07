@@ -13,7 +13,7 @@ from player_memo import MemoPlayer
 
 def main():
     
-    season = Season(100)
+    season = Season(10)
     season.add_player(RobinPlayer("R"))
     season.add_player(RobinPlayer("P"))
     season.add_player(RobinPlayer("S"))
